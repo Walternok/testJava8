@@ -22,7 +22,7 @@ public class Test {
 										.filter(number -> number > 40)
 										.collect(toList())
 										;
-		List<Integer> alsoLt = biggerThan40.parallelStream()
+		List<Integer> alsoAdded = biggerThan40.parallelStream()
 								.map(number -> number + 10)
 								.collect(toList())
 								;
@@ -37,7 +37,7 @@ public class Test {
 	
 	
 		System.out.println("Print Number > 40 and added 10");
-		evaluate(alsoLt, (n)-> true);
+		evaluate(alsoAdded, (n)-> true);
 		
 
 		System.out.println("Print even number");
